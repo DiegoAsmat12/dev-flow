@@ -1,5 +1,5 @@
 const Home = () => {
-  return <h1 className="h1-xl background-light850_dark100">Welcome</h1>;
+  return <h1 className="background-light850_dark100 text-white">Welcome</h1>;
 };
 
 export default Home;
