@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,23 +11,23 @@ export default {
     extend: {
       colors: {
         primary: {
-          100: "#FFF1E6",
-          500: "#FF7000",
+          "100": "#FFF1E6",
+          "500": "#FF7000",
         },
         dark: {
-          100: "#000000",
-          200: "#0F1117",
-          300: "#151821",
-          400: "#212734",
-          500: "#3F4354",
+          "100": "#000000",
+          "200": "#0F1117",
+          "300": "#151821",
+          "400": "#212734",
+          "500": "#3F4354",
         },
         light: {
-          400: "#858EAD",
-          500: "#7B8EC8",
-          700: "#DCE3F1",
-          800: "#F4F6F8",
-          850: "#FDFDFD",
-          900: "#FFFFFF",
+          "400": "#858EAD",
+          "500": "#7B8EC8",
+          "700": "#DCE3F1",
+          "800": "#F4F6F8",
+          "850": "#FDFDFD",
+          "900": "#FFFFFF",
         },
       },
       spacing: {},
@@ -45,7 +46,12 @@ export default {
         inter: ["var(--font-inter)"],
         "space-grotesk": ["var(--font-space-grotesk)"],
       },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
